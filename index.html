@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Walima Invitation · Ishtiaq Ahmad</title>
+<meta property="og:title" content="You are invited – Walima of Ishtiaq Ahmad">
+<meta property="og:description" content="Walima · Monday 16 November 2026 · Imperial Palace, Gujranwala">
+<meta property="og:image" content="rings.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1dfb8;--card:rgba(247,232,200,.92);--ink:#2a1f12;--muted:#6f5b3f;--gold:#9a6b22;--gold2:#dcbc7a;--champ:#ebd4a4;--line:rgba(190,145,60,.55);--shade:rgba(170,125,45,.16);--cover-shade:rgba(60,40,10,.22);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 10% 12%,rgba(255,243,212,.75),transparent 45%),radial-gradient(circle at 92% 70%,rgba(255,243,212,.6),transparent 48%),linear-gradient(180deg,#f3e2bc,#ecd5a5 50%,#f3e2bc);background-attachment:fixed;color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;line-height:1.5;text-align:center;overflow-x:hidden}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;margin:0;letter-spacing:.06em}
+.script{font-family:"Great Vibes","Brush Script MT",cursive;color:var(--gold);font-size:2.1rem}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:20}
+
+/* ===== COVER ===== */
+#cover{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:24px;
+ background:linear-gradient(var(--cover-shade),var(--cover-shade)),url(rings.jpg) center top/cover,var(--bg);
+ transition:opacity 1.4s ease,transform 1.8s ease,filter 1.4s,visibility 1.4s}
+#cover.gone{opacity:0;visibility:hidden;transform:scale(1.35);filter:blur(10px)}
+#cover .mono{position:relative;width:150px;height:150px;border-radius:50%;border:2px solid #e2c07a;display:grid;place-items:center;font:600 3rem "Playfair Display",serif;color:#e2c07a;background:rgba(20,12,4,.35);animation:pulse 3s ease-in-out infinite}
+#cover .mono::before,#cover .mono::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid #e2c07a;opacity:.5;animation:ripple 3s ease-out infinite}
+#cover .mono::after{animation-delay:1.5s}
+#cover p{margin:0;color:#fff;text-shadow:0 1px 8px #000;letter-spacing:.3em;text-transform:uppercase;font-size:.95rem;animation:fadeUp 1.4s .4s both}
+#cover .mono{animation:pop 1.2s both,pulse 3s 1.2s ease-in-out infinite}
+#openBtn{animation:fadeUp 1.4s .9s both}
+button.open,a.btn{font:600 .9rem "Cormorant Garamond",serif;letter-spacing:.2em;text-transform:uppercase;color:#2b2118;background:linear-gradient(110deg,var(--gold2) 30%,#f6e3b2 50%,var(--gold2) 70%) 0 0/250% 100%,var(--gold);border:0;border-radius:40px;padding:13px 30px;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 4px 14px var(--shade);animation:sheen 3.5s linear infinite;transition:transform .25s}
+button.open:active,a.btn:active{transform:scale(.95)}
+a.btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold);box-shadow:none;animation:none}
+@keyframes pulse{50%{box-shadow:0 0 0 14px rgba(226,192,122,.08)}}
+@keyframes ripple{from{transform:scale(1);opacity:.6}to{transform:scale(1.7);opacity:0}}
+@keyframes pop{from{transform:scale(.3) rotate(-30deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes sheen{to{background-position:-250% 0,0 0}}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(240,222,176,.15),rgba(240,222,176,0) 35%,rgba(241,223,184,.8) 62%,#f1dfb8 80%),url(rings.jpg) center top/cover no-repeat;filter:brightness(1.02) saturate(1.1);animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12) translateY(-2%)}}
+.arch{position:relative;width:min(92%,440px);background:var(--card);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:2px solid var(--line);border-radius:999px 999px 18px 18px;padding:46px 26px 34px;box-shadow:0 12px 34px var(--shade),inset 0 0 0 6px rgba(255,244,214,.6)}
+.arch.tall{border-radius:200px 200px 18px 18px;padding:54px 24px 34px;margin:0 auto}
+.hero .arch{margin-bottom:24px}
+.birds{width:64px;color:var(--gold);margin-bottom:6px;animation:flap 3s ease-in-out infinite;transform-origin:center}
+@keyframes flap{50%{transform:scale(1.12) translateY(-3px)}}
+.hero h1{font-size:1.65rem;margin:6px 0 14px}
+.host{font-weight:600}
+.groom{font-family:"Playfair Display",serif;font-size:1.9rem;margin-top:4px;background:linear-gradient(100deg,var(--gold) 20%,#d9a84a 50%,var(--gold) 80%) 0 0/250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:sheen2 4s linear infinite}
+@keyframes sheen2{to{background-position:-250% 0}}
+.scroll{position:absolute;bottom:6px;left:50%;width:22px;height:22px;margin-left:-11px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);animation:bob 1.6s infinite;opacity:.8}
+@keyframes bob{50%{transform:rotate(45deg) translate(5px,5px)}}
+
+/* ===== SECTIONS ===== */
+section{padding:60px 18px;position:relative}
+section.band{background:linear-gradient(180deg,transparent,rgba(228,198,140,.6) 16%,rgba(228,198,140,.6) 84%,transparent)}
+.arch.tall{background:linear-gradient(180deg,#faefd3,#efd9a8)}
+.cards .title{color:var(--gold)}
+.hero .arch{background:linear-gradient(180deg,rgba(250,238,208,.95),rgba(240,218,170,.93))}
+.title{font-size:1.5rem;margin-bottom:10px}
+.divider{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:14px auto}
+.cd{display:flex;gap:10px;justify-content:center;margin-top:18px}
+.cd div{min-width:68px;padding:12px 6px;border:1px solid var(--gold2);border-radius:12px;background:linear-gradient(180deg,#f8ebcb,var(--champ));box-shadow:0 4px 14px var(--shade)}
+.cd b{display:block;font:600 1.7rem "Playfair Display",serif;color:var(--gold)}
+.cd b.tick{animation:tick .5s}
+@keyframes tick{from{transform:translateY(-10px);opacity:0}to{transform:none;opacity:1}}
+.cd span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.row{display:flex;justify-content:space-between;gap:6px;max-width:300px;margin:4px auto;font-weight:600;font-size:.98rem;border-bottom:1px dotted var(--line)}
+.date{display:flex;align-items:center;justify-content:center;gap:16px;margin:18px 0 12px}
+.date .d{padding:0 16px;border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink);line-height:1.15}
+.date .d big{display:block;font:500 2.6rem "Playfair Display",serif}
+.date small{font-size:.95rem;color:var(--muted)}
+.addr{margin:8px 0 18px}
+.venue{font-family:"Playfair Display",serif;font-weight:500;font-size:1.1rem}
+.cards{display:grid;gap:44px;max-width:900px;margin:0 auto}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr;align-items:start}}
+.cards .arch{animation:glow 5s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 12px 42px rgba(236,200,120,.5),inset 0 0 0 6px rgba(255,244,214,.6)}}
+.note{max-width:420px;margin:0 auto;color:var(--muted)}
+footer{padding:50px 20px 90px;background:linear-gradient(180deg,transparent,rgba(228,198,140,.75))}
+
+/* ===== SCROLL REVEAL ===== */
+.rv{opacity:0;transform:translateY(34px) scale(.97);transition:opacity 1s var(--d,0s),transform 1s var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.rv.left{transform:translateX(-40px)}.rv.right{transform:translateX(40px)}
+.rv.left.in,.rv.right.in{transform:none}
+
+/* ===== MUSIC BUTTON ===== */
+#mus{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;place-items:center;backdrop-filter:blur(6px)}
+#mus.show{display:grid}
+#mus.playing{animation:pulse 2.4s infinite}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}canvas#fx{display:none}}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+<button id="mus" aria-label="Music on/off">♪</button>
+
+<div id="cover">
+  <div class="mono">IA</div>
+  <p>Walima Celebration</p>
+  <button class="open" id="openBtn">Open Invitation</button>
+</div>
+
+<header class="hero">
+  <div class="bg"></div>
+  <div class="arch rv">
+    <svg class="birds" viewBox="0 0 64 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 10c8-6 17-4 22 4-8-1-14 0-22-4zM61 10c-8-6-17-4-22 4 8-1 14 0 22-4zM32 33l-7-8c-2-3 1-7 4-5l3 3 3-3c3-2 6 2 4 5z"/></svg>
+    <h1>WEDDING INVITATION</h1>
+    <div class="host">Mr &amp; Mrs Prof. Rana Mushtaq Ahmad</div>
+    <div>cordially invites you to celebrate the<br>wedding of his son</div>
+    <div class="groom">Ishtiaq Ahmad</div>
+  </div>
+  <div class="scroll"></div>
+</header>
+
+<section>
+  <div class="script rv">Save the date</div>
+  <h2 class="title rv" style="--d:.2s">Counting down to the Walima</h2>
+  <div class="cd rv" style="--d:.4s"><div><b id="d">--</b><span>Days</span></div><div><b id="h">--</b><span>Hours</span></div><div><b id="m">--</b><span>Mins</span></div><div><b id="s">--</b><span>Secs</span></div></div>
+</section>
+
+<section class="band">
+  <div class="cards" style="grid-template-columns:1fr;max-width:440px">
+    <div class="arch tall rv">
+      <h2 class="title">WALIMA</h2>
+      <p>Your valued company will make our Walima truly special.</p>
+      <div class="row"><span>Reception</span><span>01:00 pm</span></div>
+      <div class="row"><span>Lunch</span><span>02:00 pm</span></div>
+      <div class="divider"></div>
+      <div class="date"><small>Monday</small><div class="d"><small>November</small><big>16</big><small>2026</small></div><small>01 pm</small></div>
+      <div class="addr"><span class="venue">Imperial Palace</span><br>Sialkot Road, Near Ferozwala Pul,<br>Gujranwala.</div>
+      <a class="btn" id="mapWalima" target="_blank" rel="noopener">Open Map</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="divider"></div>
+  <div class="script rv">With love &amp; prayers</div>
+  <p class="note rv" style="--d:.2s">Your presence and blessings will make our celebration truly complete.</p>
+  <h3 class="rv" style="--d:.4s;margin-top:14px">The family of Prof. Rana Mushtaq Ahmad</h3>
+  <p class="rv" style="--d:.6s;margin-top:22px"><a class="btn ghost" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ishtiaq+Ahmad+Wedding+%E2%80%93+Walima&dates=20261116T130000/20261116T170000&location=Imperial+Palace,+Sialkot+Road,+Near+Ferozwala+Pul,+Gujranwala">Add Walima to Calendar</a></p>
+</footer>
+
+<script>
+/* ================= EDIT HERE: MAP LOCATION =================
+   1. Open Google Maps, find the exact place, tap Share > Copy link.
+   2. Paste that link between the quotes in "link".
+   If "link" is empty, the button searches Google Maps for "query" instead. */
+var LOCATIONS = {
+  walima: { link: "https://maps.app.goo.gl/oHEs6z5gxRo715LH8?g_st=aw", query: "Imperial Palace Sialkot Road Ferozwala Pul Gujranwala" }
+};
+/* ================= EDIT HERE: WEDDING DATE (Pakistan time) ================= */
+var TARGET = "2026-11-16T13:00:00+05:00";
+
+(function(){
+  function mapUrl(l){return l.link || "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(l.query)}
+  document.getElementById("mapWalima").href=mapUrl(LOCATIONS.walima);
+
+  /* ---------- scroll reveal ---------- */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+  function reveal(){document.querySelectorAll(".rv").forEach(function(el){io.observe(el)})}
+
+  /* ---------- falling petals & sparkles ---------- */
+  var cv=document.getElementById("fx"),cx=cv.getContext("2d"),P=[],run=false;
+  function size(){cv.width=innerWidth*devicePixelRatio;cv.height=innerHeight*devicePixelRatio}
+  addEventListener("resize",size);size();
+  function mk(y){var s=Math.random();return{x:Math.random()*cv.width,y:y,r:(3+Math.random()*6)*devicePixelRatio,vy:(.4+Math.random()*1.1)*devicePixelRatio,vx:(Math.random()-.5)*.6*devicePixelRatio,a:Math.random()*6.28,va:(Math.random()-.5)*.04,petal:s>.35,c:s>.7?"226,192,122":s>.35?"236,170,170":"255,240,200"}}
+  function frame(){cx.clearRect(0,0,cv.width,cv.height);
+    P.forEach(function(p){p.y+=p.vy;p.x+=p.vx+Math.sin(p.y/60)*.5;p.a+=p.va;
+      if(p.y>cv.height+20){Object.assign(p,mk(-20))}
+      cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle="rgba("+p.c+",.75)";
+      if(p.petal){cx.beginPath();cx.ellipse(0,0,p.r,p.r*.55,0,0,6.28);cx.fill()}
+      else{cx.globalAlpha=.6+Math.sin(p.y/20)*.4;cx.beginPath();cx.moveTo(0,-p.r);cx.lineTo(p.r*.3,0);cx.lineTo(0,p.r);cx.lineTo(-p.r*.3,0);cx.fill()}
+      cx.restore()});
+    requestAnimationFrame(frame)}
+  function startFx(){if(run)return;run=true;for(var i=0;i<38;i++)P.push(mk(Math.random()*cv.height));frame()}
+
+  /* ---------- music (uses music.mp3, or a built-in soft melody if the file is missing) ---------- */
+  var au=document.getElementById("bgm"),btn=document.getElementById("mus"),on=false,ac=null,timer=null,synth=false,step=0;
+  var N=[659.25,783.99,880,783.99,659.25,587.33,523.25,587.33,659.25,783.99,1046.5,880,783.99,659.25,587.33,659.25];
+  var CH=[[130.81,196,329.63],[110,164.81,261.63],[87.31,130.81,220],[98,146.83,246.94]];
+  function note(f,t,d,v,type){var o=ac.createOscillator(),g=ac.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+d+.05)}
+  function beat(){var t=ac.currentTime+.05;note(N[step%16],t,1.6,.07,"sine");note(N[step%16]*2,t,.9,.015,"triangle");
+    if(step%4==0){CH[Math.floor(step/4)%4].forEach(function(f){note(f,t,2.8,.04,"triangle")})}step++}
+  function startSynth(){synth=true;ac=ac||new (window.AudioContext||window.webkitAudioContext)();ac.resume();clearInterval(timer);timer=setInterval(beat,650);beat();set(true)}
+  function set(v){on=v;btn.classList.toggle("playing",v);btn.textContent=v?"♪":"✕"}
+  function play(){var p=au.play();if(p&&p.then){p.then(function(){synth=false;set(true)}).catch(startSynth)}else{set(true)}}
+  function stop(){if(synth){clearInterval(timer);ac&&ac.suspend()}else au.pause();set(false)}
+  btn.addEventListener("click",function(){on?stop():(synth?(ac.resume(),clearInterval(timer),timer=setInterval(beat,650),set(true)):play())});
+  au.addEventListener("error",function(){if(on&&!synth)startSynth()});
+
+  /* ---------- open invitation ---------- */
+  var c=document.getElementById("cover");document.body.style.overflow="hidden";
+  document.getElementById("openBtn").addEventListener("click",function(){
+    c.classList.add("gone");btn.classList.add("show");play();startFx();
+    setTimeout(function(){document.body.style.overflow="";scrollTo(0,0);reveal()},700)});
+
+  /* ---------- countdown ---------- */
+  var tgt=new Date(TARGET).getTime(),prev={};
+  function put(id,v){var e=document.getElementById(id),s=String(v).padStart(2,"0");if(prev[id]!==s){e.textContent=s;e.classList.remove("tick");void e.offsetWidth;e.classList.add("tick");prev[id]=s}}
+  function tick(){var t=Math.max(0,tgt-Date.now());put("d",Math.floor(t/864e5));put("h",Math.floor(t%864e5/36e5));put("m",Math.floor(t%36e5/6e4));put("s",Math.floor(t%6e4/1e3))}
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
